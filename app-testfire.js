@@ -1,7 +1,20 @@
-'use strict';
-
 // each store is open for a set number of hours.
-let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
+let hours = [
+  '6AM',
+  '7AM',
+  '8AM',
+  '9AM',
+  '10AM',
+  '11AM',
+  '12PM',
+  '1PM',
+  '2PM',
+  '3PM',
+  '4PM',
+  '5PM',
+  '6PM',
+  '7PM',
+];
 
 // 5 store objects
 //   min number of customers per hour
@@ -25,11 +38,14 @@ let seattle = {
   avgCookPerCust: 6.3,
   salesTotals: [],
   grandTotal: 0,
-  hourlyCustomers: function() {
+  hourlyCustomers: function () {
     for (let hour = 0; hour < hours.length; hour++) {
       // 1) generate random number
       // let generateNumber = Math.floor(Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1) + this.minCustPerHour);
-      let generateNumber = generateRange(this.minCustPerHour, this.maxCustPerHour);
+      let generateNumber = generateRange(
+        this.minCustPerHour,
+        this.maxCustPerHour
+      );
 
       // 2) multiply by avgCookPerCust
       let customerSales = Math.round(generateNumber * this.avgCookPerCust);

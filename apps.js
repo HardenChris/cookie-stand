@@ -7,8 +7,8 @@ function generateRange(min, max) {
 
 let hours = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
 
-let seat = {
-  name: seat,
+let seattle = {
+  name: 'seattle',
   minCustPerHour: 23,
   maxCustPerHour: 65,
   avgCookPerCust: 6.3,
@@ -19,12 +19,14 @@ let seat = {
       let getNum = generateRange(this.minCustPerHour,this.maxCustPerHour);
       let finalCookieSales = (Math.round(getNum * this.avgCookPerCust));
       this.cookiesPerHr.push(finalCookieSales);
+      this.dailyTotal = this.dailyTotal + finalCookieSales;
+      this.cookiesPerHr.push(`${hours[hr]}: total sales ${finalCookieSales}`);
     }
   }
 };
 
 function getLineItems(store) {
-  let parentEl = document.querySelector('#${store.name}');
+  let parentEl = document.querySelector(`#${store.name}`);
 
   for (let total = 0 ; total < store.cookiesPerHr.length; total++) {
     let newItem = document.createElement('li');
@@ -33,10 +35,11 @@ function getLineItems(store) {
 
     parentEl.appendChild(newItem);
   }
-
+  let lastItem = document.createElement('li');
+  lastItem.innerText = store.dailyTotal;
+  parentEl.appendChild(lastItem);
 }
 
-console.log(seat);0
-0seat.hourSales();
-console.log(seat.cookiesPerHr);
-getLineItems(seat);
+console.log(seattle);
+seattle.hourSales();
+getLineItems(seattle);
