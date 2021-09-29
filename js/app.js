@@ -1,4 +1,6 @@
 'use strict';
+
+
 function sum(a, b) {
   let total = a + b;
   return total;
@@ -168,3 +170,4 @@ paris.dailyFinalCookieSalesFn = function finalCookieSales(){
 //console.log(paris.dailyFinalCookieSalesFn());
 paris.dailyFinalCookieSales = paris.dailyFinalCookieSalesFn();
 
+console.log(paris.test1());
