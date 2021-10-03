@@ -1,4 +1,25 @@
+html {
+    background-color: salmon;
+    font-family: "Times New Roman";
+    
+
+}
+
+/* .body {
+
+background-color: brown;
+}
+
 #seattle #lima #dubai #tokyo #paris{
 font-family: Arial;
-
 };
+
+#location-body {
+background-color: blueviolet;
+}
+
+.location-body {
+    background-color: aqua;
+}
+
+body {background-color: coral;} */

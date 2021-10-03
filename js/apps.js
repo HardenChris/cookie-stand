@@ -46,104 +46,12 @@ localsArray.push(
   lima);
 
 
-console.log(localsArray);
-
-console.log(seattle);
-console.log(tokyo);
-console.log(dubai);
-console.log(paris);
-console.log(lima);
-
-
-
-
-
-//console.log(new LocationBuilder('diamond', 12, 35, 2.1));
-//
-//console.log(diamondLocal.dailyTotal);
-//console.log(diamondLocal.cookiesPerHr);
-////console.log(getNum);
-//console.log;
-
-
-
-
-//console.log(hourSales());
-
-//localsArray.push(
-//  new LocationBuilder('diamond', 12, 35, 2.1),
-//  new LocationBuilder('denise', 2, 75, 5.4),
-//  new LocationBuilder('joshua', 32, 37, 1.6)
-//);
-//
-
-
-
-
-
-// function getLineItems(store) {
-//  let parentEl = document.querySelector(`#${store.name}`);
-
-//  for (let total = 0 ; total < store.cookiesPerHr.length; total++) {
-//    let newItem = document.createElement('li');
-
-//    newItem.innerText = store.cookiesPerHr[total];
-
-//    parentEl.appendChild(newItem);
-//  }
-//  let finalEl = document.createElement('li');
-//  finalEl.innerText = 'Total: ' + store.dailyTotal + ' cookies';
-//  parentEl.appendChild(finalEl);
-// }
-
-//getLineItems(seattle);
-//getLineItems(tokyo);
-//getLineItems(dubai);
-//getLineItems(paris);
-//getLineItems(lima);
-//seattle.hourSales();
-//getLineItems(seattle);
-//lima.hourSales();
-//getLineItems(lima);
-//dubai.hourSales();
-//getLineItems(dubai);
-//paris.hourSales();
-//getLineItems(paris);
-//tokyo.hourSales();
-//getLineItems(tokyo);
-////'diamond'.hourSales();
-////getLineItems('diamond');
-
-
-
-//
-//function generateTableHead(table, data) {
-//  let thead = table.createTHead();
-//  let row = thead.insertRow();
-//  for (let key of data) {
-//    let th = document.createElement('th');
-//    let text = document.createTextNode(key);
-//    th.appendChild(text);
-//    row.appendChild(th);
-//  }
-//}
-//
-//function generateTable(table, data) {
-//  for (let element of data) {
-//    let row = table.insertRow();
-//    for (key in element) {
-//      let cell = row.insertCell();
-//      let text = document.createTextNode(element[key]);
-//      cell.appendChild(text);
-//    }
-//  }
-//}
-//
-//let table = document.querySelector('table');
-//let data = Object.keys(seattle);
-//generateTableHead(table, data);
-//generateTable(table, seattle);
-
+// console.log(localsArray);
+// console.log(seattle);
+// console.log(tokyo);
+// console.log(dubai);
+// console.log(paris);
+// console.log(lima);
 
 
 LocationBuilder.prototype.renderTableRow = function() {
@@ -170,9 +78,49 @@ LocationBuilder.prototype.renderTableRow = function() {
 };
 
 
-let diamond = new LocationBuilder('diamond', 23, 65, 6.3);
-diamond.hourSales();
+// let diamond = new LocationBuilder('diamond', 23, 65, 6.3);
+// diamond.hourSales();
+
+
+seattle.hourSales();
+dubai.hourSales();
+tokyo.hourSales();
+paris.hourSales();
+lima.hourSales();
+
+
 //diamond.getLineItems();
-diamond.renderTableRow();
-console.log(LocationBuilder.all);
+// diamond.renderTableRow();
+// console.log(LocationBuilder.all);
 //seattle
+
+
+function createNewLocal(event) {
+  event.preventDefault();
+  //console.log(event);
+  let locName = event.target[1].value;
+  let maxCustPerHr = event.target[2].value;
+  let minCustPerHr = event.target[3].value;
+  let avgCookPerCust = event.target[4].value;
+  // console.log(locName);
+  // console.log(maxCustPerHr);
+  // console.log(minCustPerHr);
+  // console.log(avgCookPerCust);
+  let tempLoc = new LocationBuilder ( locName, maxCustPerHr, minCustPerHr, avgCookPerCust);
+  tempLoc.hourSales();
+  console.log(tempLoc.hourSales());
+  console.log(tempLoc);
+  localsArray.push(tempLoc);
+  console.log(localsArray);
+  tempLoc.renderTableRow();
+}
+
+// seattle.renderTableRow();
+// dubai.renderTableRow();
+// tokyo.renderTableRow();
+// paris.renderTableRow();
+// lima.renderTableRow();
+
+const newBuilder = document.getElementById('location-form');
+newBuilder.addEventListener('submit', createNewLocal);
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sales - Pat's Salmon Cookies </title>
+    <link href="css/reset.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">
+                    Home
+                </a></li>
+            <li><a href="sales.html">
+                    Sales
+                </a></li>
+            <li><a href="NewLocation.html">
+                    New Location Builder
+                </a></li>
+        </ul>
+    </nav>
+    <h1 class="logo"><a href="/"><img src="/imgs/salmon.png" /></a> </h1>
+</header>
+
+<body style="background-color: salmon;">
+    <form id="location-form">
+        <fieldset>
+            <label for="name">Location name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="MaxCustPerHr">What is the Maximum number of customers predicted per hour?:</label>
+            <input type="number" id="MaxCustPerHr" name="MaxCustPerHr"><br><br>
+            <label for="MinCustPerHr">What is the Minimum number of customers predicted per hour?:</label>
+            <input type="number" id="MinCustPerHr" name="MinCustPerHr"><br><br>
+            <label for="AvgNumCookPer">What is the average number of cookies bought per customer?:</label>
+            <input type="text" id="AvgNumCookPer" name="AvgNumCookPer"><br><br>
+            <button id="submit-btn">Submit</button>
+        </fieldset>
+    </form>
+
+</body>
+<script src="js/apps.js"></script>
+
+</html>
