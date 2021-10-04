@@ -5,6 +5,32 @@ html {
 
 }
 
+#location-body {
+font-family: Arial, sans-serif;
+border: thin solid black; 
+width: 1000px; 
+height: auto; 
+color: brown;
+font-size: small;
+}
+
+#footer-display{
+  font-family: Arial, sans-serif;
+border: thin solid black; 
+width: 1000px; 
+height: auto; 
+color: brown;
+font-size: small;
+}
+
+h1 {
+ font-family: 'Gemunu Libre';
+ color: aliceblue;
+}
+
+ul {
+  font-size: small;
+}
 /* .body {
 
 background-color: brown;
