@@ -20,9 +20,6 @@
                 <li><a href="sales.html">
                         Sales
                     </a></li>
-                <li><a href="NewLocation.html">
-                        New Location Builder
-                    </a></li>
             </ul>
         </nav>
         <h1 class="logo"><a href="/"><img src="/imgs/salmon.png" /></a> </h1>
@@ -35,8 +32,24 @@
                 style="font-family: Arial; border: thin solid black; width: 1000px; height: auto; color: brown;">
 
             </tbody>
+            <tfoot id="footer-display">
+
+            </tfoot>
         </table>
         </p>
+        <form id="location-form">
+            <fieldset>
+                <label for="name">Location name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="MaxCustPerHr">What is the Maximum number of customers predicted per hour?:</label>
+                <input type="number" id="MaxCustPerHr" name="MaxCustPerHr"><br><br>
+                <label for="MinCustPerHr">What is the Minimum number of customers predicted per hour?:</label>
+                <input type="number" id="MinCustPerHr" name="MinCustPerHr"><br><br>
+                <label for="AvgNumCookPer">What is the average number of cookies bought per customer?:</label>
+                <input type="text" id="AvgNumCookPer" name="AvgNumCookPer"><br><br>
+                <button id="submit-btn">Submit</button>
+            </fieldset>
+        </form>
     </main>
     <footer>
 
